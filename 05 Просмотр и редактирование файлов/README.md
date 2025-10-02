@@ -61,3 +61,19 @@ content.txt
 test_file.txt
 text.txt
 ```
+Теперь мы допишем в наш созданный файл вывод команды:  
+```bash
+$ ls d:/git >> content.txt # через >> дописываем вывод содержимого из другой директории
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat content.txt # смотрим на результат 
+content.txt 
+test_file.txt 
+text.txt
+Bash/ # отсюда начинаются новые строки, которые мы дописали
+DBT/
+Docker/
+GIT/
+Python/
+SQL/
+```
