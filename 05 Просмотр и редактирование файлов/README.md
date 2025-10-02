@@ -20,5 +20,24 @@ test_file.txt  text.txt
 
 user@WIN-CVKT899RCS2 MINGW64 /d/learning
 $ cat test_file.txt # открываем файл и видим наш текст
-'Привет! Что ты изучаешь?'
+Привет! Что ты изучаешь?
+```
+А еще `cat` может дописать один файл в другой, или добавить строку, переданную команде:  
+```bash
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat > test_file.txt
+Привет! Что ты изучаешь?
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat text.txt >> test_file.txt 
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat >> test_file.txt 
+Что у вас здесь происходит?
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat test_file.txt 
+Привет! Что ты изучаешь?
+Привет! Я изучаю bash.
+Что у вас здесь происходит?
 ```
