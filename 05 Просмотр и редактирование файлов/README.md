@@ -77,3 +77,38 @@ GIT/
 Python/
 SQL/
 ```
+# Объединение файлов
+`cat` позволяет нам также объединять файлы:  
+```bash
+# Просматриваем файлы в текущей директории
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ ls
+content.txt  test_file.txt  text.txt
+
+# ОБЪЕДИНЕНИЕ ФАЙЛОВ: создаем merged.txt, содержащий содержимое ДВУХ файлов
+# ПОРЯДОК ФАЙЛОВ ВАЖЕН: сначала content.txt, потом test_file.txt
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat content.txt test_file.txt > merged.txt
+
+# Проверяем - появился новый файл merged.txt
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ ls
+content.txt  merged.txt  test_file.txt  text.txt
+
+# Смотрим содержимое объединенного файла
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat merged.txt 
+content.txt          # ← из content.txt
+test_file.txt        # ↓
+text.txt             # ↓
+Bash/                # ↓
+DBT/                 # ↓  
+Docker/              # ↓
+GIT/                 # ↓
+Memories/            # ↓
+py_data/             # ↓
+Python/              # ↓
+SQL/                 # ↓
+Привет! Что ты изучаешь?           # ← из test_file.txt
+Привет! Я изучаю bash.Что у вас здесь происходит?  # ↓
+```
