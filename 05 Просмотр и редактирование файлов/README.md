@@ -112,3 +112,28 @@ SQL/                 # ↓
 Привет! Что ты изучаешь?           # ← из test_file.txt
 Привет! Я изучаю bash.Что у вас здесь происходит?  # ↓
 ```
+Аналогично мы можем дописать один файл в другой:  
+```bash
+# ДОБАВЛЯЕМ содержимое файла text.txt в КОНЕЦ merged.txt
+# Используется оператор >> (добавление), а не > (перезапись)
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat text.txt >> merged.txt
+
+# Просматриваем обновленное содержимое merged.txt
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat merged.txt 
+content.txt                          # ← из content.txt
+test_file.txt                        # ↓
+text.txt                             # ↓
+Bash/                                # ↓
+DBT/                                 # ↓  
+Docker/                              # ↓
+GIT/                                 # ↓
+Memories/                            # ↓
+py_data/                             # ↓
+Python/                              # ↓
+SQL/                                 # ↓
+Привет! Что ты изучаешь?             # ← из test_file.txt
+Привет! Я изучаю bash.Что у вас здесь происходит?  # ↓
+Привет! Я изучаю bash.               # ← ДОБАВЛЕНО из text.txt (последняя строка)
+```
