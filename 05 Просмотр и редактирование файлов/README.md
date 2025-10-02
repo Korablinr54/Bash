@@ -41,3 +41,23 @@ $ cat test_file.txt
 Привет! Я изучаю bash.
 Что у вас здесь происходит?
 ```
+# Перенаправление вывода: `>` и `>>`
+Например, мы можем вывод любой команды записать или дописать в файл. Давайте содержимое директории сохраним в файл:  
+```bash
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ ls # проверим содержимое директории
+test_file.txt  text.txt
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ ls > content.txt # передадим результат вывода в новый файл
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ ls # видим, что новый файл появился в директории
+content.txt  test_file.txt  text.txt
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat content.txt # и он содержит список файлов директории
+content.txt
+test_file.txt
+text.txt
+```
