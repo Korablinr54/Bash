@@ -9,3 +9,16 @@ user@WIN-CVKT899RCS2 MINGW64 /d/learning
 $ cat text.txt # смотрим на содержимое файла
 Привет! Я изучаю bash. # вывод
 ```
+Помимо просмотра, команда `cat` может создавать файлы:
+```bash
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat > test_file.txt # создаем новый файл указав его имя
+'Привет! Что ты изучаешь?' # вводим в него текст и завершаем Ctrl + d
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ ls # смотрим на список файлов и видим новый файл, который создали
+test_file.txt  text.txt
+
+user@WIN-CVKT899RCS2 MINGW64 /d/learning
+$ cat test_file.txt # открываем файл и видим наш текст
+'Привет! Что ты изучаешь?'
+```
