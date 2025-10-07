@@ -14,9 +14,9 @@
 | `-user` | Поиск по владельцу | `find /tmp -user john` |
 | `-exec` | Выполнить команду для найденного | `find . -name "*.log" -exec rm {} \;` |
 
-# Примеры
+## Примеры
 
-## Поиск по имени
+### Поиск по имени
 ```sh
 # найдем все записи с подстрокой some в имени
 user@WIN-CVKT899RCS2 MINGW64 /d
@@ -39,7 +39,7 @@ $ find d:/ -name some_* -type d # для поиска директорий
 d:/learn/some_folder
 ```
 
-## Поиск по размеру
+### Поиск по размеру
 
 Варианты:  
 - +100M - больше 100 МБ  
@@ -52,7 +52,7 @@ $ find d:/ -name some_* -type f -size -1M
 d:/learn/some_file
 ```
 
-## Поиск пустых файлов и папок
+### Поиск пустых файлов и папок
 
 Поиск пустых файлов:
 ```sh
@@ -66,7 +66,7 @@ $ find d:/ -name some_* -type d -empty
 d:/learn/some_folder
 ```
 
-# Поиск файлов, доступных для чтения
+### Поиск файлов, доступных для чтения
 ```sh
 $ find d:/learn/ -readable
 d:/learn/
@@ -83,3 +83,5 @@ $ find d:/learn/ -readable -type d
 d:/learn/
 d:/learn/some_folder
 ```
+
+# Команда locate
