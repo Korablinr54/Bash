@@ -21,18 +21,20 @@
 # найдем все записи с подстрокой some в имени
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ find d:/ -name some_*
-find: ‘d:/$RECYCLE.BIN/S-1-5-18’: Permission denied
-find: ‘d:/Config.Msi’: Permission denied
+
 d:/learn/some_file # результаты с подстройок some
-d:/learn/some_folder # 
-d:/Program Files/Python/Lib/site-packages/scipy/io/matlab/tests/data/some_functions.mat
-find: ‘d:/System Volume Information’: Permission denied
-find: ‘d:/TEMP/msdtadmin’: Permission denied
+d:/learn/some_folder
 ```
 
 <br>
 
 Найдем отдельно файлы и отдельно директории:
 ```bash
+$ find d:/ -name some_* -type f # для поиска файлов
 
+d:/learn/some_file # наш файл
+
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ find d:/ -name some_* -type d # для поиска директорий
+d:/learn/some_folder
 ```
