@@ -38,3 +38,30 @@ user@WIN-CVKT899RCS2 MINGW64 /d
 $ find d:/ -name some_* -type d # для поиска директорий
 d:/learn/some_folder
 ```
+
+## Поиск по размеру
+
+Варианты:  
+- +100M - больше 100 МБ  
+- -100M - меньше 100 МБ  
+- 100M - ровно 100 МБ  
+
+Найдем наш файл, указав, что ищем именно файл размером менее 1 МБ.
+```sh
+$ find d:/ -name some_* -type f -size -1M
+d:/learn/some_file
+```
+
+# Поиск пустых
+
+Поиск пустых файлов:
+```sh
+$ find d:/ -name some_* -type f -empty
+d:/learn/some_file
+```
+
+Поиск пустых файлов:
+```sh
+$ find d:/ -name some_* -type d -empty
+d:/learn/some_folder
+```
