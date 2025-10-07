@@ -52,7 +52,7 @@ $ find d:/ -name some_* -type f -size -1M
 d:/learn/some_file
 ```
 
-# Поиск пустых
+## Поиск пустых файлов и папок
 
 Поиск пустых файлов:
 ```sh
@@ -63,5 +63,23 @@ d:/learn/some_file
 Поиск пустых файлов:
 ```sh
 $ find d:/ -name some_* -type d -empty
+d:/learn/some_folder
+```
+
+# Поиск файлов, доступных для чтения
+```sh
+$ find d:/learn/ -readable
+d:/learn/
+d:/learn/some_file
+d:/learn/some_folder
+
+# поиск файлов, доступных для чтения в директории
+$ find d:/learn/ -readable -type f
+d:/learn/some_file
+
+# поиск папок, доступных для чтения 
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ find d:/learn/ -readable -type d
+d:/learn/
 d:/learn/some_folder
 ```
