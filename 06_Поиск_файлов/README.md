@@ -83,5 +83,3 @@ $ find d:/learn/ -readable -type d
 d:/learn/
 d:/learn/some_folder
 ```
-
-# Команда locate
