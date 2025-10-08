@@ -38,4 +38,11 @@ $ grep 'Ты' -ri -n d:/learn
 d:/learn/poem.txt:1:Ты и Вы
 d:/learn/poem.txt:2:Пустое вы сердечным ты
 d:/learn/poem.txt:4:И все счастливые мечты
+
+# поиск только в txt файлах `--include='*.txt'`
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ grep 'Ты' --include='*.txt' -ri -n d:/learn
+d:/learn/poem.txt:1:Ты и Вы
+d:/learn/poem.txt:2:Пустое вы сердечным ты
+d:/learn/poem.txt:4:И все счастливые мечты
 ```
