@@ -89,5 +89,51 @@ apple
 3
 2
 1
+```
 
+Сортировка с удалением дубликатов:
+```sh
+# добавим дубликатов
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ nano sort_file.txt
+
+# посмотрим на файл
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ cat sort_file.txt
+banana
+apple # 
+apple # дубль
+apple # дубль
+orange
+pineaple
+tomato
+potato
+pepper
+linux_1
+linux
+linux_test
+1
+2
+3
+4
+5
+
+# а теперь отсортируем файл с ключом -u
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ sort -u sort_file.txt
+1
+2
+3
+4
+5
+apple # дубликатов нет
+banana
+linux
+linux_1
+linux_test
+orange
+pepper
+pineaple
+potato
+tomato
 ```
