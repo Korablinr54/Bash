@@ -47,3 +47,25 @@ linux_test
 5
 
 ```
+
+## Примеры 
+Обычная сортировка:
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ sort sort_file.txt
+1 # по возрастанию
+2
+3
+4
+5
+apple # а дальше в лексикографическом порядке 
+banana
+linux
+linux_1
+linux_test
+orange
+pepper
+pineaple
+potato
+tomato
+```
