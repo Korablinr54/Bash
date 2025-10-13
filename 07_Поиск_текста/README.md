@@ -7,46 +7,59 @@
 grep [опции] "шаблон" [файлы]
 ```
 
-## Поиск в файлах
+## Примеры
+### Поиск в одном файле
 ```sh
-
-# поиск в одном файле
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' d:/learn/poem.txt
 Ты и Вы
+```
 
-# поиск в нескольких файлах
+### поиск в нескольких файлах
+```sh
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' d:/learn/poem.txt d:/learn/some_file
 d:/learn/poem.txt:Ты и Вы
+```
 
-# поиск в директории `-r`
+### поиск в директории `-r`
+```sh
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' -r d:/learn
 d:/learn/poem.txt:Ты и Вы
+```
 
-# игнорирование регистра `-i`
+### игнорирование регистра `-i`
+```sh
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' -ri d:/learn
 d:/learn/poem.txt:Ты и Вы
 d:/learn/poem.txt:Пустое вы сердечным ты
 d:/learn/poem.txt:И все счастливые мечты
+```
 
-# указание номера строки `-n`
+
+### указание номера строки `-n`
+```sh
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' -ri -n d:/learn
 d:/learn/poem.txt:1:Ты и Вы
 d:/learn/poem.txt:2:Пустое вы сердечным ты
 d:/learn/poem.txt:4:И все счастливые мечты
+```
 
-# поиск только в txt файлах `--include='*.txt'`
+### поиск только в txt файлах 
+```sh
+`--include='*.txt'`
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' --include='*.txt' -ri -n d:/learn
 d:/learn/poem.txt:1:Ты и Вы
 d:/learn/poem.txt:2:Пустое вы сердечным ты
 d:/learn/poem.txt:4:И все счастливые мечты
+```
 
-# выведем все строки и номера, которые не соотвествуют шаблону
+### выведем все строки и номера, которые не соотвествуют шаблону
+```sh
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' -vn  d:/learn/poem.txt
 2:Пустое вы сердечным ты
@@ -58,11 +71,12 @@ $ grep 'Ты' -vn  d:/learn/poem.txt
 8:Свести очей с нее нет силы;
 9:И говорю ей: как вы милы!
 10:И мыслю: как тебя люблю!
+```
 
-# или подсчитаем количество вхождений по файлам в директории `-c`
+### или подсчитаем количество вхождений по файлам в директории `-c`
+```sh
 user@WIN-CVKT899RCS2 MINGW64 /d
 $ grep 'Ты' -ric d:/learn
 d:/learn/poem.txt:3
 d:/learn/some_file:0
-
 ```
