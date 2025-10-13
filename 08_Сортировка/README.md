@@ -69,3 +69,25 @@ pineaple
 potato
 tomato
 ```
+
+Обратная сортировка:
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ sort sort_file.txt -r
+tomato
+potato
+pineaple
+pepper
+orange
+linux_test
+linux_1
+linux
+banana
+apple
+5
+4
+3
+2
+1
+
+```
