@@ -31,9 +31,16 @@ $ wc -l poem.txt
 9 poem.txt
 ```
 
-### Сама длинная строка `-L`
+### Самая длинная строка `-L`
 ```sh
 user@WIN-CVKT899RCS2 MINGW64 /d/learn
 $ wc -L poem.txt
 28 poem.txt
+```
+
+### Размер файла в битах `-c`
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ wc -c poem.txt
+385 poem.txt
 ```
