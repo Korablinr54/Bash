@@ -23,3 +23,10 @@ user@WIN-CVKT899RCS2 MINGW64 /d/learn
 $ wc -w poem.txt
 39 poem.txt
 ```
+
+### Общее количество строк `-l`
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ wc -l poem.txt
+9 poem.txt
+```
