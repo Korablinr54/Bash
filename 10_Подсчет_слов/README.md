@@ -16,3 +16,10 @@ user@WIN-CVKT899RCS2 MINGW64 /d/learn
 $ wc -m poem.txt
 221 poem.txt
 ```
+
+### Общее количество слов `-w`
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ wc -w poem.txt
+39 poem.txt
+```
