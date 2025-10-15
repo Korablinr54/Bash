@@ -30,3 +30,10 @@ user@WIN-CVKT899RCS2 MINGW64 /d/learn
 $ wc -l poem.txt
 9 poem.txt
 ```
+
+### Сама длинная строка `-L`
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d/learn
+$ wc -L poem.txt
+28 poem.txt
+```
