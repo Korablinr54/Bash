@@ -43,3 +43,12 @@ $ du learn/ -ah | sort -r
 ```
 
 # Анализ места на диске `df`
+Для анализа доступного пространства на диске необходимо использовать `df -hT`. `-h` отобразит данные в удобном формате а `-T` сообщит информацию о файловой системе.  
+```sh
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ df -hT
+Filesystem           Type  Size  Used Avail Use% Mounted on
+D:/Program Files/Git ntfs  269G  185G   85G  69% /
+C:                   ntfs  198G  103G   96G  52% /c
+E:                   ntfs   10G  8.4G  1.7G  84% /e
+```
