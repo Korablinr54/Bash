@@ -16,3 +16,28 @@ user@WIN-CVKT899RCS2 MINGW64 /d
 $ du learn/'big file.pdf'
 7504    learn/big file.pdf
 ```
+
+Запустим с упомянутыми ключами:
+```sh
+# совем другое дело
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ du learn/ -ah
+7.4M    learn/big file.pdf
+1.0K    learn/numbers.txt
+1.0K    learn/poem.txt
+1.0K    learn/some_file
+0       learn/some_folder
+1.0K    learn/sort_file.txt
+7.4M    learn/ # общий размер папки
+
+# а можно через | pipe, например добавить сортировку
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ du learn/ -ah | sort -r
+7.4M    learn/big file.pdf
+7.4M    learn/
+1.0K    learn/sort_file.txt
+1.0K    learn/some_file
+1.0K    learn/poem.txt
+1.0K    learn/numbers.txt
+0       learn/some_folder
+```
