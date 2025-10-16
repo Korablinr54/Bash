@@ -34,6 +34,7 @@ $ cat text.txt >> test_file.txt
 user@WIN-CVKT899RCS2 MINGW64 /d/learning
 $ cat >> test_file.txt 
 Что у вас здесь происходит?
+# Ctrl + D для выхода.
 
 user@WIN-CVKT899RCS2 MINGW64 /d/learning
 $ cat test_file.txt 
