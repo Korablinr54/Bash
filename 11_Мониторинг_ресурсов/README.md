@@ -52,3 +52,18 @@ D:/Program Files/Git ntfs  269G  185G   85G  69% /
 C:                   ntfs  198G  103G   96G  52% /c
 E:                   ntfs   10G  8.4G  1.7G  84% /e
 ```
+
+# Определение типпа файла `file`
+Команда явно определит тип файла вне зависимости от его расширения.
+```sh
+# здесь все понятно, это pdf
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ file learn/big_file.pdf
+learn/big_file.pdf: PDF document, version 1.3, 1 page(s)
+
+# а что в этом странном файле?
+user@WIN-CVKT899RCS2 MINGW64 /d
+$ file learn/photo.exe # выглядит как подвох
+learn/photo.exe: ASCII text
+# всего лишь текстовый файл
+```
