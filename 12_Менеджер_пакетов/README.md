@@ -178,3 +178,88 @@ dpkg -l
 ```
 
 # Менеджер snap
+
+Что такое Snap?  
+**Snap** - кроссплатформенный менеджер пакетов от Canonical, который создает изолированные контейнеризованные пакеты.  
+
+## Установка и обновление
+
+```sh
+# Установка пакета
+snap install firefox
+firefox 128.0 from Mozilla** installed
+```
+
+```sh
+# Обновление всех пакетов
+snap refresh
+All snaps up to date.
+```
+
+```sh
+# Обновление конкретного пакета
+snap refresh firefox
+```
+
+## Просмотр информации
+
+```sh
+# Список установленных пакетов
+snap list
+
+Name      Version    Rev   Tracking       Publisher   Notes
+core      16-2.64.4  16202 latest/stable  canonical** base
+firefox   128.0      3624  latest/stable  mozilla**   -
+```
+
+```sh
+# Поиск пакетов
+snap find telegram
+
+Name      Version  Developer  Notes  Summary
+telegram  4.16.4   telegram-desktop  -      Telegram Desktop
+```
+
+```sh
+# Информация о пакете
+snap info firefox
+
+name:      firefox
+summary:   Mozilla Firefox
+publisher: Mozilla**
+contact:   https://support.mozilla.org/
+license:   unset
+description: |
+  Firefox is a powerful, extensible web browser with support for modern
+  web application technologies.
+```
+
+## Управление пакетами
+```sh
+# Удаление пакета
+snap remove firefox
+firefox removed
+```
+
+```sh
+# Включение пакета
+snap enable firefox
+```
+
+```sh
+# Отключение пакета
+snap disable firefox
+```
+
+### Преимущества Snap
+
+- **Изоляция** - пакеты работают в песочнице
+- **Автообновления** - автоматические обновления безопасности
+- **Кросс-дистрибутивность** - работают на любом Linux
+- **Зависимости** - все зависимости включены в пакет
+
+### Недостатки Snap
+
+- **Размер пакетов** - обычно больше традиционных пакетов
+- **Время запуска** - может быть медленнее
+- **Дисковое пространство** - занимает больше места
