@@ -136,3 +136,16 @@ Security details are available in apt-secure(8).
 ```sh
 dpkg -i some_app.deb
 ```
+
+## Удаление пакет `-r`
+Для удаления установленного пакета достаточно воспользоваться:
+```sh
+# Сначала проверяем, что пакет установлен
+dpkg -l | grep some_app
+
+# Затем удаляем
+sudo dpkg -r some_app
+
+# Проверяем, что пакет удален
+dpkg -l | grep some_app
+```
