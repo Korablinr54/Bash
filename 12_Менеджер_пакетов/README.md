@@ -9,13 +9,16 @@ Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 ...
-Progress: [ 82%] [################################################################################################......................]
+Progress: [ 82%] [#######################################################......................]
 ...
 done.
 ```
 
 ### Проблема с установкой
 При установке пакета может возникнуть ошибка. Ошибка `E: Unable to locate package terminator` означает, что пакетный менеджер APT не может найти пакет terminator в доступных репозиториях. Причин может быть несколько, мы попробуем обновить менеджер пакетов, в нашем случае это поможет.  
+
+### Обновление доступных пакетов `apt update`
+
 ```sh
 root@69b01309ee03:/# apt update
 Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
@@ -29,6 +32,7 @@ Reading state information... Done
 ```
 
 ## Удаление `apt remove`
+
 Таким же обрпазом удалим то, что установили. `apt remove название пакета`.
 ```sh
 root@69b01309ee03:/# apt remove terminato
