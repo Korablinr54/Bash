@@ -8,6 +8,10 @@ root@69b01309ee03:/# apt install terminator
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
+...
+Progress: [ 82%] [################################################################################################......................]
+...
+done.
 ```
 
 ### Проблема с установкой
@@ -22,4 +26,12 @@ Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+```
+
+## Удаление `apt remove`
+Таким же обрпазом удалим то, что установили. `apt remove название пакета`.
+```sh
+root@69b01309ee03:/# apt remove terminato
+Removing terminator (2.1.3-1) 
+...
 ```
