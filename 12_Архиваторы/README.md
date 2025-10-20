@@ -109,3 +109,33 @@ root@d6d18a1f292e:/test_arc_folder# tar -xvf /pack/arch.tar.gz -C /test_arc_fold
 | `-u` | Обновить существующий архив |
 | `-d` | Удалить файлы из архива |
 
+Создадим zip-архив
+```sh
+root@d6d18a1f292e:/# mkdir TEST
+root@d6d18a1f292e:/# cd TEST/
+root@d6d18a1f292e:/TEST# mkdir -p level_1/level_2/lever_3
+root@d6d18a1f292e:/TEST# touch level_1/level_2/lever_3/file.txt
+root@d6d18a1f292e:/TEST# zip arch.zip -r0v level_1/   
+
+# вывод
+root@d6d18a1f292e:/TEST# zip arch.zip -r0v level_1/
+  adding: level_1/      (in=0) (out=0) (stored 0%)
+  adding: level_1/level_2/      (in=0) (out=0) (stored 0%)
+  adding: level_1/level_2/lever_3/      (in=0) (out=0) (stored 0%)
+  adding: level_1/level_2/lever_3/file.txt      (in=0) (out=0) (stored 0%)
+total bytes=0, compressed
+```
+
+Теперь распакуем его в другую папку.
+| Ключ | Описание |
+|------|----------|
+| `-l` | Показать содержимое архива |
+| `-v` | Подробный просмотр содержимого |
+| `-d` | Распаковать в указанную директорию |
+| `-o` | Перезаписать существующие файлы |
+| `-n` | Не перезаписывать существующие файлы |
+| `-P` | Указать пароль (небезопасно) |
+
+```sh
+
+```
