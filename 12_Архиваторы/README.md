@@ -20,7 +20,7 @@ root@633916c9fb8a:/archive_test# ls
 file.txt
 
 # создаем архив
-root@633916c9fb8a:/archive_test# tar czvf archive.tar.gz ./file.txt
+root@633916c9fb8a:/archive_test# tar -czvf archive.tar.gz ./file.txt
 ./
 ./file.txt
 tar: .: file changed as we read it
@@ -35,3 +35,25 @@ archive.tar.gz  file.txt
 * `v` - выводить подробную информацию о процессе
 * `f` - указать ия архива archive.tar.gz
 * `./file.txt` - поместить в текущей директории
+
+Для создания архивая не в текущей папке а в любой другой:
+```sh
+# проверяем список файлов 
+root@633916c9fb8a:/archive_test# ls
+file.txt
+
+# создаем тестовую папку
+root@633916c9fb8a:/archive_test# mkdir archive_test
+
+# создаем архив
+root@633916c9fb8a:/archive_test# tar -czvf ./archive_test/arc.tar.gz file.txt 
+file.txt
+
+# проверяем наличие архива
+root@633916c9fb8a:/archive_test# ls archive_test/
+arc.tar.gz
+```
+
+* `tar -czvf` - вызов утилиты с ключами
+* * `./archive_test/arc.tar.gz` - куда сохраняем архив с его именем
+* * `file.txt` - что архивируем, можно также указать путь
