@@ -125,6 +125,16 @@ root@d6d18a1f292e:/TEST# zip arch.zip -r0v level_1/
   adding: level_1/level_2/lever_3/file.txt      (in=0) (out=0) (stored 0%)
 total bytes=0, compressed
 ```
+- `zip arch.zip -r0v level_1/` 
+- `zip` — вызов утилиты для создания ZIP-архивов
+- `arch.zip` — имя создаваемого архива (можно указать путь: /path/arch.zip)
+- `-r0v` — комбинация ключей:
+  - `-r` — рекурсивное архивирование (включая поддиректории)
+  - `-0` — без сжатия (только упаковка, stored)
+  - `-v` — подробный вывод процесса
+- `level_1/` — что архивируем (директория для архивации)
+
+## Распаковка и просмотр архива
 
 Теперь распакуем его в другую папку.
 | Ключ | Описание |
@@ -137,5 +147,22 @@ total bytes=0, compressed
 | `-P` | Указать пароль (небезопасно) |
 
 ```sh
+root@d6d18a1f292e:/TEST# ls
+arch.zip  level_1
+root@d6d18a1f292e:/TEST# mkdir unpack
 
+root@d6d18a1f292e:/TEST# unzip arch.zip -d ./unpack/
+
+# вывод
+Archive:  arch.zip
+   creating: ./unpack/level_1/
+   creating: ./unpack/level_1/level_2/
+   creating: ./unpack/level_1/level_2/lever_3/
+ extracting: ./unpack/level_1/level_2/lever_3/file.txt  
+root@d6d18a1f292e:/TEST# 
 ```
+
+Рассмотрим `root@d6d18a1f292e:/TEST# unzip arch.zip -d ./unpack/`  
+- `unzip` - вызов утилиты  
+- `arch.zip` - что распаковываем, можно указать и путь
+- `-d ./unpack/` - ключ для распаковки в указанную директорию и путь
