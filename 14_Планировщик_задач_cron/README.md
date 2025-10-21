@@ -64,3 +64,14 @@ tail -f /var/log/syslog | grep cron
 ls -l /path/to/script.sh
 chmod +x /path/to/script.sh
 ```
+
+## Примеры
+
+### Пример 1: Ежедневная очистка временных файлов
+
+```sh
+# Выполняется каждый день в 00:00
+0 0 * * * rm -rf /tmp/*
+# Альтернатива с ключевым словом
+@daily rm -rf /tmp/*
+```
