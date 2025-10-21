@@ -75,3 +75,13 @@ chmod +x /path/to/script.sh
 # Альтернатива с ключевым словом
 @daily rm -rf /tmp/*
 ```
+
+### Пример 2: Еженедельное обновление системы
+
+```sh
+# Каждое воскресенье в 6:30 утра
+30 6 * * 0 apt update && apt upgrade -y
+# Альтернативная запись
+@weekly apt update && apt upgrade -y
+```
+
