@@ -25,3 +25,16 @@ wget -c https://example.com/large_file.iso
 wget -r --level=2 https://example-site.com
 ```
 
+## Практические сценарии использования
+
+### Загрузка с переименованием
+
+```sh
+wget -O dataset.csv "https://api.example.com/data/export?format=csv"
+```
+
+### Ограничение скорости загрузки:
+
+```sh
+wget --limit-rate=1M https://mirror.example.com/ubuntu-22.04.iso
+```
