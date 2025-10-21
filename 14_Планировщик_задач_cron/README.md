@@ -85,3 +85,9 @@ chmod +x /path/to/script.sh
 @weekly apt update && apt upgrade -y
 ```
 
+### Пример 3: Резервное копирование базы данных
+
+```sh
+# Каждый день в 2:30 ночи
+30 2 * * * /usr/bin/mysqldump -u user -p password database > /backups/db_$(date +\%Y\%m\%d).sql
+```
