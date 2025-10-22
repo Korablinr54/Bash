@@ -61,3 +61,20 @@ sudo poweroff
 # или
 sudo halt
 ```
+
+## Управление через systemd (современный подход)
+
+```sh
+# Выключение системы
+sudo systemctl poweroff
+
+# Перезагрузка
+sudo systemctl reboot
+
+# Приостановка (режим сна)
+sudo systemctl suspend
+
+# Гибернация
+sudo systemctl hibernate
+```
+
